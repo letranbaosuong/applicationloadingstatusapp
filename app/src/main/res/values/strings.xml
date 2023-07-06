@@ -4,11 +4,30 @@
     <string name="action_settings">Settings</string>
 
 
+    <string name="download_notification_channel_id">Download Notification channel</string>
+    <string name="download_notification_channel_description">Download Notification channel</string>
     <string name="notification_title">Udacity: Android Kotlin Nanodegree </string>
     <string name="notification_description">The Project 3 repository is downloaded</string>
     <string name="notification_button">See changes</string>
 
+    <string name="udacity_option">LoadApp - Current repository by Udacity</string>
+    <string name="retrofit_option">Retrofit - A type-safe HTTP client for Android and Java</string>
+    <string name="glide_option">Glide - Image library loading image by Bump Tech</string>
+    <string name="glide_option_error">Glide - Image library loading image by Bump Tech - FAILED</string>
+    <string name="msg_select_file_to_download">Please select a file to download</string>
+
     <string name="button_name">Click me</string>
-    <string name="button_loading">We are loading </string>
+    <string name="button_loading">We are loading</string>
+    <string name="button_normal">Download</string>
     <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="label_file_name">File name:</string>
+    <string name="label_file_status">Status:</string>
+
+    <string name="btn_ok">OK</string>
+
+    <string name="notification_channel_name">ND940C3-Channel</string>
+    <string name="notification_channel_name_description">ND940C3-Channel Description</string>
+
+    <string name="please_select_file">Please select file to download!</string>
 </resources>

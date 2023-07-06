@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'org.jetbrains.kotlin.kapt'
     id 'kotlin-android'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -31,6 +32,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+//        parcelize = true
     }
     buildFeatures {
         viewBinding true

@@ -31,12 +31,6 @@ fun NotificationManager.sendNotification(
         detailActivityIntent,
         PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
     )
-//    val buttonPendingIntent: PendingIntent = PendingIntent.getBroadcast(
-//        applicationContext,
-//        NOTIFICATION_ID,
-//        detailActivityIntent,
-//        PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-//    )
 
     val builder = NotificationCompat.Builder(applicationContext, channelId)
         .setSmallIcon(R.drawable.ic_assistant_black_24dp)

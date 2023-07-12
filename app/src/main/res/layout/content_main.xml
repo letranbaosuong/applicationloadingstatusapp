@@ -13,11 +13,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/custom_button"
+        app:layout_constraintBottom_toTopOf="@+id/loading_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <RadioButton
             android:id="@+id/radio_glide"
@@ -25,26 +26,31 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:onClick="onRadioButtonClicked"
-            android:text="Glide"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:text="@string/glide_option"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:ignore="UsingOnClickInXml" />
 
         <RadioButton
             android:id="@+id/radio_load_app"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:minHeight="48dp"
             android:onClick="onRadioButtonClicked"
-            android:text="Load App"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:text="@string/load_option"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:ignore="UsingOnClickInXml" />
 
         <RadioButton
             android:id="@+id/radio_retrofit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:minHeight="48dp"
             android:onClick="onRadioButtonClicked"
-            android:text="Retrofit"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:text="@string/retrofit_option"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:ignore="UsingOnClickInXml" />
     </RadioGroup>
 
     <com.letranbaosuong.applicationloadingstatusapp.LoadingButton
@@ -62,5 +68,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9"
         app:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="413dp"
+        android:layout_height="208dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/download_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

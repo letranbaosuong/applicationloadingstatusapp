@@ -14,14 +14,14 @@
                 app:motionTarget="@id/layoutContent" />
             <KeyAttribute
                 app:framePosition="50"
-                app:motionTarget="@id/btnOk">
+                app:motionTarget="@id/buttonOk">
                 <CustomAttribute
                     app:attributeName="backgroundColor"
                     app:customColorValue="@color/colorPrimary" />
             </KeyAttribute>
             <KeyAttribute
                 app:framePosition="100"
-                app:motionTarget="@id/btnOk">
+                app:motionTarget="@id/buttonOk">
                 <CustomAttribute
                     app:attributeName="backgroundColor"
                     app:customColorValue="@color/colorAccent" />
@@ -29,7 +29,6 @@
         </KeyFrameSet>
     </Transition>
 
-    <!-- Constraints to apply at the end of the animation -->
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@+id/layoutContent"
@@ -38,7 +37,7 @@
             android:alpha="0"
             tools:alpha="1" />
         <Constraint
-            android:id="@+id/btnOk"
+            android:id="@+id/buttonOk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0"
@@ -48,7 +47,6 @@
             tools:alpha="1" />
     </ConstraintSet>
 
-    <!-- Constraints to apply at the end of the animation -->
     <ConstraintSet android:id="@+id/end">
         <Constraint
             android:id="@+id/layoutContent"
@@ -56,7 +54,7 @@
             android:layout_height="0dp"
             android:alpha="1" />
         <Constraint
-            android:id="@+id/btnOk"
+            android:id="@+id/buttonOk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="1"

@@ -2,17 +2,9 @@
 <resources>
     <declare-styleable name="LoadingButton">
         <!--   TODO: create custom attributes for the view-->
-        <attr name="ld_highlight_color" format="color" />
-        <attr name="ld_title_normal" format="string" />
-        <attr name="ld_title_loading" format="string" />
-        <attr name="ld_background_loading" format="color" />
-        <attr name="ld_background_normal" format="color" />
-        <attr name="ld_title_color" format="color" />
-        <attr name="ld_title_size" format="dimension" />
-
-        <attr name="backgroundColor" format="color" />
-        <attr name="textColor" format="color" />
-        <attr name="buttonLoadingColor" format="color" />
         <attr name="buttonCircleColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="buttonLoadingColor" format="color" />
     </declare-styleable>
 </resources>

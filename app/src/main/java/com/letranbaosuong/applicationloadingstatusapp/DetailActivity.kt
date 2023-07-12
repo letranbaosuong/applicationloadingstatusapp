@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 
 const val DETAIL_ACTIVITY_INTENT_STATUS_KEY = "Status"
 const val DETAIL_ACTIVITY_INTENT_FILENAME_KEY = "FileName"
@@ -30,11 +31,17 @@ class DetailActivity : AppCompatActivity() {
         val notificationManager = getSystemService(NotificationManager::class.java)
         notificationManager.cancelAll()
 
-        val fileName = intent.getStringExtra(DETAIL_ACTIVITY_INTENT_STATUS_KEY)
+        val fileName = intent.getStringExtra(DETAIL_ACTIVITY_INTENT_FILENAME_KEY)
         fileNameValue.text = fileName
 
-        val status = intent.getStringExtra(DETAIL_ACTIVITY_INTENT_FILENAME_KEY)
+        val status = intent.getStringExtra(DETAIL_ACTIVITY_INTENT_STATUS_KEY)
         statusValue.text = status
+        statusValue.setTextColor(
+            ContextCompat.getColor(
+                applicationContext,
+                if (status.equals("Fail")) R.color.red else R.color.colorPrimaryDark
+            )
+        )
 
         buttonOk.setOnClickListener {
             finish()

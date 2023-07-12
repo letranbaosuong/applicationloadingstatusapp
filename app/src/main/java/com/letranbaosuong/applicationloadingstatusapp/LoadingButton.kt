@@ -104,14 +104,61 @@ class LoadingButton @JvmOverloads constructor(
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val minWidth: Int = paddingLeft + paddingRight + suggestedMinimumWidth
-        val w: Int = resolveSizeAndState(minWidth, widthMeasureSpec, 1)
-        val h: Int = resolveSizeAndState(
-            MeasureSpec.getSize(w),
+        val width: Int = resolveSizeAndState(minWidth, widthMeasureSpec, 1)
+        val height: Int = resolveSizeAndState(
+            MeasureSpec.getSize(width),
             heightMeasureSpec,
             0
         )
-        widthSize = w
-        heightSize = h
-        setMeasuredDimension(w, h)
+        widthSize = width
+        heightSize = height
+        setMeasuredDimension(width, height)
+
+//        val desiredWidth = 100
+//        val desiredHeight = 100
+//
+//        val widthMode = MeasureSpec.getMode(widthMeasureSpec)
+//        val widthSize = MeasureSpec.getSize(widthMeasureSpec)
+//        val heightMode = MeasureSpec.getMode(heightMeasureSpec)
+//        val heightSize = MeasureSpec.getSize(heightMeasureSpec)
+//
+//        //Measure Width
+//        val width: Int = when (widthMode) {
+//            MeasureSpec.EXACTLY -> {
+//                //Must be this size
+//                widthSize
+//            }
+//
+//            MeasureSpec.AT_MOST -> {
+//                //Can't be bigger than...
+//                min(desiredWidth, widthSize)
+//            }
+//
+//            else -> {
+//                //Be whatever you want
+//                desiredWidth
+//            }
+//        }
+//
+//        //Measure Height
+//        val height: Int = when (heightMode) {
+//            MeasureSpec.EXACTLY -> {
+//                //Must be this size
+//                heightSize
+//            }
+//
+//            MeasureSpec.AT_MOST -> {
+//                //Can't be bigger than...
+//                min(desiredHeight, heightSize)
+//            }
+//
+//            else -> {
+//                //Be whatever you want
+//                desiredHeight
+//            }
+//        }
+//
+//        //MUST CALL THIS
+//        setMeasuredDimension(width, height)
     }
 }

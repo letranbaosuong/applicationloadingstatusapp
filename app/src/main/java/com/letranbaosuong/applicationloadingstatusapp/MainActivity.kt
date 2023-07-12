@@ -164,4 +164,9 @@ class MainActivity : AppCompatActivity() {
             notificationManager.createNotificationChannel(notificationChannel)
         }
     }
+
+    override fun onDestroy() {
+        unregisterReceiver(receiverDownload)
+        super.onDestroy()
+    }
 }
